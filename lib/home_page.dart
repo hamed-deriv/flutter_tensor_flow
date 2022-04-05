@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
+  const HomePage({required this.title, Key? key}) : super(key: key);
 
   final String title;
 
@@ -11,10 +11,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(elevation: 0, title: Text(widget.title)),
-      body: const Center(),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(elevation: 0, title: Text(widget.title)),
+        body: const Center(),
+      );
 }
